@@ -1,0 +1,48 @@
+* {
+    font-family:"Nunito Sans", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid red;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav top top top"
+    "nav main main main";
+}
+
+nav {
+    grid-area: nav;
+
+}
+
+header {
+    grid-area: top;
+}
+
+main { 
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "proj proj ann"
+    "proj proj trend";
+}
+
+.projects {
+    grid-area: proj;
+}
+
+.announcements {
+    grid-area: ann;
+}
+
+.trending {
+    grid-area: trend;
+}
+
+ul {
+    list-style-type: none;
+}
