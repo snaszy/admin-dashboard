@@ -1,11 +1,13 @@
 * {
     font-family:"Nunito Sans", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 1px solid red;
+    /* font-size: 1.25rem;  */
+    /* border: 1px solid red; */
+    margin: 0;
 }
 
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas:
     "nav top top top"
@@ -14,11 +16,92 @@ body {
 
 nav {
     grid-area: nav;
-
+    background-color: rgb(57, 149, 230);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 3rem;
+    padding: 50px;
 }
 
 header {
     grid-area: top;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 50px;
+    box-shadow: 0px 3px 10px 5px rgba(0, 0, 0, .1);
+    z-index:-1;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.search-bar {
+    background-color: lightgray;
+    min-width: 75px;
+    max-width: 600px;
+    height: 25px;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.profile-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.little-profile {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.big-profile {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-text {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.small-text {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.large-text {
+    font-size: 2rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-button {
+    background-color: rgb(57, 149, 230);
+    color: white;
+    border: none; 
+    border-radius: 25px;
+    padding: 10px 25px;
+    margin-left: 20px;
+    font-weight: 700;
 }
 
 main { 
@@ -29,10 +112,43 @@ main {
     grid-template-areas:
     "proj proj ann"
     "proj proj trend";
+    background-color: rgba(0,0,0,.1);
+}
+
+.main-header {
+    flex-basis: 100%;
+    padding-top: 20px;
 }
 
 .projects {
     grid-area: proj;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    gap: 25px;
+}
+
+.card-container {
+    display: flex;
+    background-color: white;
+    max-width: 48%;
+    border-radius: 15px 25px 25px 15px;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, .1);
+}
+
+.card-decoration {
+    background-color: goldenrod;
+    width: 50px;
+    border-radius: 25px 0 0 25px;
+}
+
+.card-content {
+    margin: 30px;
+}
+
+.card-options {
+    text-align: end;
+    font-size: 1.5rem;
 }
 
 .announcements {
@@ -45,4 +161,7 @@ main {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
+
+
